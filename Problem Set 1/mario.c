@@ -3,8 +3,11 @@
 
 int main(void)
 {
-    //ask user
     
+    /*This program prints the half-pyramid as seen on Mario Bros, 
+    where the user gives the height of the pyramid*/
+    
+    //ask user for height
     int height;
     do
     {
