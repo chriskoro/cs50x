@@ -1,11 +1,11 @@
+/*This program prints the half-pyramid as seen on Mario Bros, 
+where the user gives the height of the pyramid*/
+
 #include <stdio.h>
 #include <cs50.h>
 
 int main(void)
 {
-    
-    /*This program prints the half-pyramid as seen on Mario Bros, 
-    where the user gives the height of the pyramid*/
     
     //ask user for height
     int height;
