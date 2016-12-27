@@ -1,4 +1,4 @@
-/*Program takes the provided user's name,
+/*Program takes the provided user's name
 and displays the capitalized initials*/
 
 #include <stdio.h>
