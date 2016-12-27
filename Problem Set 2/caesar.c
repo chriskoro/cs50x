@@ -1,3 +1,7 @@
+/* This program uses the Caesar Cipher to encrypt the user's given message
+by the value that the user provides (ie if user provides 3 and plaintext "hi", 
+program will show "kl") */
+
 #include <stdio.h>
 #include <cs50.h>
 #include <stdlib.h>
