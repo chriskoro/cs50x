@@ -1,11 +1,11 @@
-#include <stdio.h>
-#include <cs50.h>
-#include <math.h>
-
 /* This program implements the Greedy algorithm to find the least
 amount of coins to give back to the user (after the user provides 
 the change amount, in dollars). For instance, .41 or 41 cents is
 4 coins (a quarter, a dime, a nickel, a penny)*/
+
+#include <stdio.h>
+#include <cs50.h>
+#include <math.h>
 
 int main (void)
 {
