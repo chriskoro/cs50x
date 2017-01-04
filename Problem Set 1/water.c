@@ -1,3 +1,8 @@
+/*
+Gives the amount of bottles used for the length of shower given 
+by user (not from command prompt yet, but from GetString() from 
+cs50 library).
+*/
 #include <stdio.h>
 #include <cs50.h>
 
