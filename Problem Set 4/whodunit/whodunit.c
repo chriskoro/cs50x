@@ -3,6 +3,9 @@
  * and verdict files provided at command line by the user (must be 2
  * 4-bit uncompressed Bitmap 4.0). The crux of the problem is taking 
  * the clue file and modifying the colors as needed so we can visually see "whodunit".
+ * Note the provided clue and verdict files must be in the same directory
+ * as the C file (./whodunit infile.txt outfile.txt) or else you will
+ * need to provide the address where the txt files are.
  */
        
 #include <stdio.h>
