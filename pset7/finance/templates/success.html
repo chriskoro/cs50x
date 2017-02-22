@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Success!
+{% endblock %}
+
+{% block main %}
+    <p>Success. {{ username }}, you have added ${{ cash_to_add }} to your account!</p>
+    <p>Return to <a href="{{ url_for('index') }}">index</a></p>
+{% endblock %}

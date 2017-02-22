@@ -1,0 +1,41 @@
+0. What is pneumonoultramicroscopicsilicovolcanoconiosis?
+    The longest word in a major dictionary (45 characters)
+
+1. According to its man page, what does getrusage do?
+    Returns resources used by calling process (all threads in process) to the struct we defined ('before' or 'after')
+
+2. Per that same man page, how many members are in a variable of type struct rusage?
+    16 members
+
+3. Why do you think we pass before and after by reference (instead of by value) to calculate, even though we’re not changing their contents?
+    First, because the function requires that we pass in a pointer (address) to the struct. Pointers are more efficient to work with.  
+    If we passed in a copy each time we called getrusage(), then we would have to go through storing the returned struct in a variable, 
+    which is less efficient / more work.
+
+4. Explain as precisely as possible, in a paragraph or more, how main goes about reading words from a file. 
+In other words, convince us that you indeed understand how that function’s for loop works.
+    First, main accepts the user-provided parameters of the text file it should be reading, then saves its name in a char* (meaning string), 
+    then saves that read-mode file's address in fp (via fread).  
+    The for loop ultimately checks each word in the text (fp).  It stores each character starting from the first character in fp in a 
+    temporary character file (c) each time through the loop until the end of file (moving forward character by character, ie the first time 
+    through (for the word hello) c='h', the second time c='e', and so on).  
+    Through each iteration of the loop (meaning for every character, c), we just check to see if that c is alphabetic or an apostrophe, or 
+    if c is a digit.  If its alphabetic or an apostrophe, then we store the value of the array at that index (which increments each time we 
+    find an alphabetic character or apostrophe) to the current c, unless the index is greater than 45 characters meaning we effectively discard 
+    the word by resetting the index of the array to 0 for the next iteration.  In the case that c is a digit, we do the same thing we did if 
+    it was too long (discard it).  
+    Finally, if for this character, none of the other 2 tests passed and the index is greater than 0, logically we must have found a whole word.  
+    So we put the index of the buffer to the null terminator (\0), update the amount of words obviously, and then CHECK THE WORDS SPELLING against 
+    the dictionary, where if it is misspelled (meaning it doesn't exist in the dictionary), we display that to the user and increment the count of 
+    misspellings, and set back the index to 0 for the next iteration of the loop.  
+    
+5. Why do you think we used fgetc to read each word’s characters one at a time rather than use fscanf with a format string like "%s" to 
+read whole words at a time? Put another way, what problems might arise by relying on fscanf alone?
+    Because fscanf is not granular enough here.  fscanf is based on whitespace characters discriminating between words, we need character 
+    by character.  For example if we used fscanf, then we would also count a word that has a number in it rather than discarding it 
+    like we are able to now with fgetc.
+    
+
+6. Why do you think we declared the parameters for check and load as const (which means "constant")?
+    Because there is no need for the dictionary we are using to check or the address of the word to change. (ie each time we go through 
+    the for loop, we are using the exact same word[] array and are just overwriting it from index 0 and up).

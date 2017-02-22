@@ -1,0 +1,59 @@
+#!/usr/bin/env python3
+
+import sys
+import nltk
+import os
+
+from helpers import get_user_timeline
+from analyzer import Analyzer
+from termcolor import colored
+
+# TODO
+
+def main():
+    # ensure proper usage
+    if len(sys.argv) != 2:
+        sys.exit("Usage: ./tweets screen_name")
+        
+    #get the tweets, LIST OF STRINGS ['']
+    first50tweets = get_user_timeline(sys.argv[1], 50)
+    if first50tweets == None:
+        print("can not find username (ie doesn't exist or private account)")
+        sys.exit(0)
+    
+    # tokenize all tweets (into list of 50 strings)
+    # z = len(first50tweets) would print '50'
+    tokenizer = nltk.tokenize.TweetTokenizer()
+    
+    # absolute paths to lists
+    positives = os.path.join(sys.path[0], "positive-words.txt")
+    negatives = os.path.join(sys.path[0], "negative-words.txt")
+    
+    # initiate Analyzer (pos and neg words to check against)
+    analyzer = Analyzer(positives, negatives)
+    
+    # iterate over every token, scoring each token as pos neg or neutral
+    # sum will indiciate whether first 50 tweets was pos or neg summed together
+    score = 0
+
+    for s in first50tweets:
+        temp = tokenizer.tokenize(s)
+        n = len(temp)
+        for i in range(n):
+            if temp[i].lower() in analyzer.positiveSet:
+                score = score + 1
+            elif temp[i].lower() in analyzer.negativeSet:
+                score = score - 1
+    
+    # printout
+    if score < 0.0:
+        print(colored("):", "red"))
+    elif score > 0.0:
+        print(colored("(:", "green"))
+    else:
+        print(colored("|:", "yellow"))
+        
+    print("{}".format(score))
+    
+if __name__ == "__main__":
+    main()
