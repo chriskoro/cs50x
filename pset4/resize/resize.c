@@ -4,6 +4,8 @@
  * to the degree given by the user, n.
  * 
  * notes: inptr is the small, outptr is the large / resized
+ * 
+ * Usage: resize factor infile.bmp outfile.bmp
  */
        
 #include <stdio.h>

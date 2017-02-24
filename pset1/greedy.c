@@ -1,3 +1,11 @@
+/*
+User enters amount of change in program, and program
+calculates the least amount of change to be returned
+(ie 4 coins for .41 or 41 cents) using greedy algorithm
+
+Usage: greedy
+*/
+
 #include <stdio.h>
 #include <cs50.h>
 #include <math.h>

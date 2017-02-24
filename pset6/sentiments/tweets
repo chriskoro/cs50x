@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
 
+'''
+Program shows user the 'score' of the given
+twitter user's tweets' sentiments (happy, sad, neutral)
+in the command prompt, with the user providing the
+screen name of the user (ie realDonaldTrump)
+'''
+
 import sys
 import nltk
 import os

@@ -1,3 +1,10 @@
+'''
+implements greedy algorithm with 
+user entering change in dollars in-program
+like in pset 1
+Usage: python greedy.py
+'''
+
 import cs50
 
 # get dollars from user

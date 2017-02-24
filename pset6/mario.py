@@ -1,3 +1,10 @@
+'''
+builds mario pyramid
+with user entering desired height during runtime
+like in pset1
+Usage: python mario.py
+'''
+
 import cs50
 
 while True:

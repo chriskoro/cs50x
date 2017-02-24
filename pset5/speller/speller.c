@@ -1,6 +1,8 @@
 /**
  * Implements a spell-checker, much like MS Word's.
  * I take no credit for speller.c (I implemented dictionary.c)
+ * 
+ * Usage: speller [optional dictionary] file_to_check.txt
  */
 
 #include <ctype.h>

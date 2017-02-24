@@ -1,3 +1,10 @@
+/*
+User enters height of mario pyramid during
+runtime and program prints it of that size.
+
+Usage: mario
+*/
+
 #include <stdio.h>
 #include <cs50.h>
 

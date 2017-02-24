@@ -1,4 +1,5 @@
-/* Prints user initials with user providing name */
+/* Prints user initials with user providing name 
+Usage: initials */
 
 #include <stdio.h>
 #include <cs50.h>

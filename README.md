@@ -1,5 +1,5 @@
 # cs50x
-Problem Sets and Final Project for Harvard's CS50x, 2017
+Problem Sets (and Final Project?) for Harvard's CS50x, 2017
 
 All courses are following the project-based OSSU path, this course being the first. (Then next will be 02 - [Next course name], etc.)
 

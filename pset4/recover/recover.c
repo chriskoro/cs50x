@@ -1,5 +1,6 @@
-/* Recovers a jpeg image from the forensic image (card.raw)
-The forensic image is 1s and 0s */
+/* Recovers a jpeg image from the forensic image (card.raw, 1s and 0s)
+usage: recover
+*/
 
 #include <stdio.h>
 #include <stdint.h>

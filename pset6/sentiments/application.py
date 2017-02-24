@@ -1,3 +1,8 @@
+'''
+Web app shows a chart of provided user screen name
+(ie realDonaldTrump) in web server using flask micro-framework
+'''
+
 from flask import Flask, redirect, render_template, request, url_for
 import os
 import sys

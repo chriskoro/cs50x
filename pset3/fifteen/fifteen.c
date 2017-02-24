@@ -4,13 +4,15 @@
  * Computer Science 50
  * Problem Set 3
  *
- * Implements Game of Fifteen (generalized to d x d).
+ * Implements party favor, Game of Fifteen (generalized to d x d).
  *
  * Usage: fifteen d
  *
  * whereby the board's dimensions are to be d x d,
  * where d must be in [DIM_MIN,DIM_MAX]
  *
+ * In game, use arrow keys to move the numbers as needed to win
+ * 
  * Note that usleep is obsolete, but it offers more granularity than
  * sleep and is simpler to use than nanosleep; `man usleep` for more.
  */

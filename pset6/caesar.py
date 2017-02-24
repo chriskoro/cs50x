@@ -1,3 +1,9 @@
+'''
+Implements caesar cipher with user entering number
+as key and providing plaintext in-program, like in pset1
+Usage: python caesar.py key
+'''
+
 import cs50
 import sys
 

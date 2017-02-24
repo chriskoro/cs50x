@@ -1,5 +1,7 @@
 /* Program uses the Vigenere cipher to encrypt a plaintext 
-message given by the user with the keyword given by the user */
+message given by the user in program with the keyword given 
+by the user at the command prompt 
+Usage: viginere alphabeticKey */
 
 #include <stdio.h>
 #include <cs50.h>

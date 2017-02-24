@@ -1,3 +1,10 @@
+/*
+User inputs shower length and program
+prints water bottles used
+
+Usage: water
+*/
+
 #include <stdio.h>
 #include <cs50.h>
 

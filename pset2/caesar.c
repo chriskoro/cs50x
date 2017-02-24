@@ -1,3 +1,10 @@
+/*
+Uses caesar cipher to encrypt text given by user
+by the key (number) given by user at command prompt
+
+Usage: caesar key
+*/
+
 #include <stdio.h>
 #include <cs50.h>
 #include <stdlib.h>
